@@ -1,17 +1,24 @@
 <script setup>
 import { ref } from 'vue'
-// ref稍有不同，可以支持简单类型和对象类型
-const count = ref(0)
 
-const increase=()=>{
-  count.value++
-  // 这里就必须通过.value来获取数据，然后进行修改
-}
+const list = ref([1, 2, 3, 4, 5])
+import { computed } from 'vue'
 
+const computedList = computed(() => {
+  return list.value.filter(item => item > 2)
+})
+// 需要调用computed属性
+setTimeout(() => {
+  list.value.push(6)
+  // 向数组中插入数字6
+}, 3000)
 </script>
 
 <template>
   <div>
-    <button @click = "increase">{{ count }}</button>
+    {{ list.value }}
+  </div>
+  <div>
+    {{ computedList }}
   </div>
 </template>
