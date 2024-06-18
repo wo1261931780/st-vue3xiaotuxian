@@ -16,6 +16,7 @@ onMounted(() => {
   <div class = "father">
     <h2 ref = "h2Com">我是父组件</h2>
     <!--通过ref绑定ref对象-->
+<!--通过绑定，这里的 h2com 已经被绑定到组件的 value 属性内部-->
     <SonComponent012 ref = "sonCom" />
   </div>
 </template>

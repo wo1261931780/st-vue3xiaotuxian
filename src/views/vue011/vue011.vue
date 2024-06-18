@@ -10,9 +10,9 @@ const fuGetMsg = (msg) => {
 <template>
   <div class = "father">
     <h2>我是父组件</h2>
-<!--    <SonComponent011 :zi2fuMsg = "fuGetMsg"/>-->
+<!--<SonComponent011 :zi2fuMsg = "fuGetMsg"/>-->
     <SonComponent011 @zi2fuMsg = "fuGetMsg"/>
-<!--    子组件给父组件需要使用@来绑定事件，父组件给子组件需要使用:来绑定数据-->
+<!--子组件给父组件需要使用@来绑定事件，父组件给子组件需要使用:来绑定数据-->
   </div>
 </template>
 <!--第一步是父组件fuGetMsg来绑定子组建中的zi2fuMsg事件-->
