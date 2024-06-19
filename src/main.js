@@ -10,6 +10,7 @@ const app = createApp(App)
 // 用来创建一个app实例
 // 首先用app作为实例，生成一个应用实例对象
 app.use(createPinia())
+// 这里 pinia和插件一样，类似上面的说法去使用
 app.use(router)
 
 app.mount('#app')
